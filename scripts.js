@@ -21,6 +21,7 @@ amount.oninput = () => {
   amount.value = formatCurrencyBRL(value)
 }
 
+// Formata o valor no padrão BRL (Real Brasileiro).
 function formatCurrencyBRL(value) {
   // Formata o valor no padrão BRL (Real Brasileiro).
   value = value.toLocaleString("pt-BR", {
@@ -155,3 +156,11 @@ function updateTotals() {
     alert("Não foi possível atualizar os totais.")
   }
 }
+
+// Evento que captura o clique nos itens da Lista.
+exepenseList.addEventListener("click", function (event) {
+  // Verifica se o elemento clicado é o ícone de remover.
+  if (event.target.classList.contains("remove-icon")) {
+    console.log(event)
+  }
+})
